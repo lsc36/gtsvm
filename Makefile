@@ -127,11 +127,11 @@ INNER_MAKEFLAGS := \
 .PHONY : all
 all:
 	@for ii in $(SUBDIRS) ; do \
-		( cd $$ii ; $(MAKE) $(MAKEFLAGS) $(INNER_MAKEFLAGS) all ) ; \
+		( cd $$ii ; $(MAKE) $(INNER_MAKEFLAGS) all ) ; \
 	done
 
 .PHONY : clean
 clean :
 	@for ii in $(SUBDIRS) ; do \
-		( cd $$ii ; $(MAKE) $(MAKEFLAGS) $(INNER_MAKEFLAGS) clean ) ; \
+		( cd $$ii ; $(MAKE) $(INNER_MAKEFLAGS) clean ) ; \
 	done
